@@ -1,0 +1,20 @@
+python --version
+pip3 --version
+pip3 install pip --upgrade
+pip install matplotlib
+help('modules')
+
+try:
+    import mutagen
+    print("module 'mutagen' is installed")
+except ModuleNotFoundError:
+    print("module 'mutagen' is not installed")
+    install("mutagen")
+
+try:
+    import matplotlib
+    print("Already installed")
+except ImportError as e:
+    print("Error -> ", e)
+    pip3 install matplotlib
+
